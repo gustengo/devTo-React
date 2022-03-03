@@ -1,0 +1,24 @@
+const mongoose = require('mongoose')
+
+const postSchema = new mongoose.Schema({
+    writer: {
+        type: String,
+        required: true,
+        trim: true,
+        minLength: 2,
+        maxLength: 30
+    },
+    content: {
+        type: String,
+        required: true,
+        match: /.+@.+\..+/ 
+    },
+    title: {
+        type: String,
+        required: true,
+    }
+})
+
+const model = mongoose.model('users', userSchema)
+
+module.exports = model
