@@ -25,13 +25,25 @@ const writerSchema = new mongoose.Schema({ //Agregar campos de writers
         minLength: 3,
         maxLength: 30,
         trim: true
+    },     //añadir email y password para hacer login y encriptacion dcrypt
+    email: {
+        type: String,
+        required: true,
+        trim: true
     },
+    password: {
+        type: String,
+        required: true,
+        minLength: 3,
+        maxLength: 20,
+        trim: true
+    }
 
 }, {
     timestamps: true
 })
 
 
-const model = mongoose.model('writer', writerSchema)
+const model = mongoose.model('writers', writerSchema)
 
 module.exports = model

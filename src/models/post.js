@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 
-const postSchema = new mongoose.Schema({ //Agregar los campos del post
+const postSchema = new mongoose.Schema({     // añadir la abstraccion de un post en dev.to
+    writerImg: {
+        type: Image,
+        required: true,
+    },
     writer: {
         type: String,
         required: true,
@@ -8,12 +12,35 @@ const postSchema = new mongoose.Schema({ //Agregar los campos del post
         minLength: 2,
         maxLength: 30
     },
+    date: {
+        type: Date,
+        required: true,
+        trim: true,
+    },
     title: {
         type: String,
         required: true,
+        trim: true
+    },
+    hastag:{
+        type:String,
+        required: true,
+    },
+    reactions: {
+        type: Number,
+        required: true
+    },
+    comments: {
+        type: Number,
+        required: true
+    },
+    readTime: {
+        type: String,
+        required: true
     }
+
 })
 
-const model = mongoose.model('users', userSchema)
+const model = mongoose.model('posts', postSchema)
 
 module.exports = model

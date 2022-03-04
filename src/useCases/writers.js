@@ -1,21 +1,20 @@
-const User = require('../models/post')
+const Writer = require('../models/writers')
 
 
 function getAll () {
-    return User.find({})
+    return Writer.find({})
 }
 
 
+async function signUp (dataWriter) {
 
-async function signUp (dataPost) {
+    const {email, password, name} = dataWriter
 
-    const {email, password, name} = dataPost
+    const writerFound = await Writer.findOne({email: email})
 
-    const postFound = await User.findOne({email: email})
-
-    if(postFound) throw new Error('Post already exists')
+    if(writerFound) throw new Error('User already exists')
     
-    return Post.create({name, email, password})
+    return Writer.create({name, email, password})
 }
 
 

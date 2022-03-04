@@ -1,15 +1,15 @@
 
 
-const Writer = require('../models/writers')
+const Post = require('../models/post')
 
 function getAll() {
-   return Writer.find({}) 
+   return Post.find({}) 
 }
 
-function create(dataWriter) {
+function create(dataPost) {
     
-    const {name, lastName, age, gender} = dataWriter 
-    return Writer.create({nickName, age}) 
+    const {name, lastName, age, gender} = dataWriter
+    return Post.create(dataPost)  
 }
 
 
