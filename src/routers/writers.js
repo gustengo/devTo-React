@@ -9,7 +9,7 @@ router.get('/', async (request, response) => {
 
         response.json({
             success: true,
-            message: 'All koders',
+            message: 'All writers',
             data: {
                 writers: allWriters
             }

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const writerSchema = new mongoose.Schema({
+const writerSchema = new mongoose.Schema({ //Agregar campos de writers
     nickName: {
         type: String,
         required: true,

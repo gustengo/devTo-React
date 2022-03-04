@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const postSchema = new mongoose.Schema({
+const postSchema = new mongoose.Schema({ //Agregar los campos del post
     writer: {
         type: String,
         required: true,

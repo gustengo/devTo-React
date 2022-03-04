@@ -1,17 +1,25 @@
-const writer = require('../models/writers')
+const User = require('../models/post')
 
-function getAll() {
-   return Writer.find({}) 
+
+function getAll () {
+    return User.find({})
 }
 
-function create(dataWriter) {
+
+
+async function signUp (dataPost) {
+
+    const {email, password, name} = dataPost
+
+    const postFound = await User.findOne({email: email})
+
+    if(postFound) throw new Error('Post already exists')
     
-    const {name, lastName, age, gender} = dataWriter 
-    return Writer.create({nickName, age}) 
+    return Post.create({name, email, password})
 }
 
 
 module.exports = {
     getAll,
-    create
+    signUp
 }
