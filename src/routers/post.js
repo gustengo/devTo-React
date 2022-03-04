@@ -47,4 +47,43 @@ router.post('/', async (request, response) => {
     }
 })
 
+router.patch('/:id', async (request, response) => {
+    try{
+    const idPost = request.params.id;
+    const dataToUpdate = request.body
+    const post = await useCasesPost.updateData(idPost, dataToUpdate, {new: true}) // Esto es lo que vamos a actualizar, 
+    if (!post) throw new Error("koder not found");
+    response.json({
+      succes: true,
+      data: {
+        post: post,
+      },
+    });
+  } catch (error) {
+    response.status(404);
+    response.json({
+      succes: false,
+      message: error.message,
+    })
+  }
+})
+
+router.delete('/:id', async(request, response) => {
+    try { const idPost =  request.params.id
+         const deletePost = await useCasesPost.deleteById(idPost)
+         response.json({
+             success: true,
+             message:'Post Deleted',
+             data: {post: deletePost}
+         })
+    } catch (error) {
+        response.status(400)
+        response.json({
+            success: false,
+            message: 'Error id Post',
+            error: error.message
+        })
+    }
+})
+
 module.exports = router

@@ -8,11 +8,6 @@ const postSchema = new mongoose.Schema({ //Agregar los campos del post
         minLength: 2,
         maxLength: 30
     },
-    content: {
-        type: String,
-        required: true,
-        match: /.+@.+\..+/ 
-    },
     title: {
         type: String,
         required: true,
