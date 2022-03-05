@@ -22,7 +22,7 @@ const postSchema = new mongoose.Schema({     // añadir la abstraccion de un pos
         required: true,
         trim: true
     },
-    hastag:{
+    hashtag:{
         type:String,
         required: true,
     },

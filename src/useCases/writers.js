@@ -1,12 +1,24 @@
 const Writer = require('../models/writers')
 
 
-function getAll () {
-    return Writer.find({})
-}
-
-
-async function signUp (dataWriter) {
+function getAll() {
+    return Writer.find({}) 
+ }
+ 
+ function create(dataWriter) {
+     const {name, joinDate, biography, nationality, email, password} = dataWriter
+     return Writer.create(dataWriter)  
+ }
+ 
+ function updateData(idWriter, dataToUpdate){
+     return Writer.findByIdAndUpdate(idWriter, dataToUpdate)
+ }
+ 
+ function deleteById(idWriter) {
+     return Writer.findByIdAndDelete(idWriter)
+ }
+ 
+ async function signUp (dataWriter) {
 
     const {email, password, name} = dataWriter
 
@@ -19,7 +31,7 @@ async function signUp (dataWriter) {
     return Writer.create({name, email, password: passwordEncrypted})
 }
 
-function login(email, password){
+async function login(email, password){
     const writerFound = await Writer.findOne({email})
     
     if (!writerFound) throw new Error ('Invalid Credentials')
@@ -32,9 +44,12 @@ function login(email, password){
     return jwt.sign({id: writerFound._id})
 }
 
-
 module.exports = {
     getAll,
     signUp,
-    login
+    login,
+    getAll,
+    create,
+    updateData,
+    deleteById
 }

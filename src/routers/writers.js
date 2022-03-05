@@ -70,13 +70,13 @@ router.patch('/:id', async (request, response) => {
 
 router.delete('/:id', async(request, response) => {
     try { const idWriter =  request.params.id
-         const deleteWriter = await useCasesWriters.deleteById(idPost)
+         const deleteWriter = await useCasesWriters.deleteById(idWriter)
          response.json({
              success: true,
              message:'Writter Deleted',
              data: {writer: deleteWriter}
          })
-    } catch (error) {
+    } catch (error) { //Preguntar a Fer manejo de null como resultado de búsqueda
         response.status(400)
         response.json({
             success: false,

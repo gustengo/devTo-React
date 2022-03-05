@@ -12,9 +12,9 @@ const writerSchema = new mongoose.Schema({ //Agregar campos de writers
         type: Date,
         required: true,
     },
-    biografy: {
+    biography: {
         type: String,
-        required: true,
+        required: false,
         minLength: 3,
         maxLength: 150,
         trim: true
