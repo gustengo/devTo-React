@@ -17,9 +17,14 @@ function deleteById(idPost) {
     return Post.findByIdAndDelete(idPost)
 }
 
+function getDetails(idPost){
+    return Post.findById(idPost)
+}
+
 module.exports = {
     getAll,
     create,
     updateData,
-    deleteById
+    deleteById,
+    getDetails
 }

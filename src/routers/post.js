@@ -24,6 +24,27 @@ router.get('/', async (request, response) => {
     }
 })
 
+// GET by ID
+router.get('/:id', async (request, response) => {
+    try { 
+        const idPost =  request.params.id
+        const getPost = await useCasesPost.getDetails(idPost)
+        response.json({
+            success: true,
+            message:'Post Finded',
+            data: {writer: getPost}
+        })
+        console.log("Success")
+   } catch (error) { //Preguntar a Fer manejo de null como resultado de búsqueda
+       response.status(400)
+       response.json({
+           success: false,
+           message: 'Error id Post',
+           error: error.message
+       })
+   }
+})
+
 router.post('/', async (request, response) => {
     try {
         const postToCreate = request.body

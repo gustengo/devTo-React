@@ -17,6 +17,10 @@ function getAll() {
  function deleteById(idWriter) {
      return Writer.findByIdAndDelete(idWriter)
  }
+
+ function getById(idWriter){
+     return Writer.findById(idWriter)
+ }
  
  async function signUp (dataWriter) {
 
@@ -51,5 +55,6 @@ module.exports = {
     getAll,
     create,
     updateData,
-    deleteById
+    deleteById,
+    getById
 }

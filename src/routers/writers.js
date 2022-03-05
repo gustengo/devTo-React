@@ -24,6 +24,29 @@ router.get('/', async (request, response) => {
     }
 })
 
+// GET by ID
+router.get('/:id', async (request, response) => {
+    try { 
+        const idWriter =  request.params.id
+        const getWriter = await useCasesWriters.getById(idWriter)
+        response.json({
+            success: true,
+            message:'Writter Finded',
+            data: {writer: getWriter}
+        })
+        console.log("Success")
+   } catch (error) { //Preguntar a Fer manejo de null como resultado de búsqueda
+       response.status(400)
+       response.json({
+           success: false,
+           message: 'Error id Writter123',
+           error: error.message
+       })
+   }
+})
+
+/////////
+
 router.post('/', async (request, response) => {
     try {
         const writerToCreate = request.body
