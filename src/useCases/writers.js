@@ -14,11 +14,27 @@ async function signUp (dataWriter) {
 
     if(writerFound) throw new Error('User already exists')
     
-    return Writer.create({name, email, password})
+    const passwordEncrypted = await bcrypt.hash(password)
+
+    return Writer.create({name, email, password: passwordEncrypted})
+}
+
+function login(email, password){
+    const writerFound = await Writer.findOne({email})
+    
+    if (!writerFound) throw new Error ('Invalid Credentials')
+
+    const isValidPassword = await bcrypt.compare(password, writerFound.password)
+
+    if(!isValidPassword) throw Error('Invalid Credentials *')
+  
+    //regresa token
+    return jwt.sign({id: writerFound._id})
 }
 
 
 module.exports = {
     getAll,
-    signUp
+    signUp,
+    login
 }

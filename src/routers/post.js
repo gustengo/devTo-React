@@ -11,7 +11,7 @@ router.get('/', async (request, response) => {
             success: true,
             message: 'All post',
             data: {
-                writers: allPost
+                posts: allPost
             }
         })
     } catch (error) {

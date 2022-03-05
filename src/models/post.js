@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const postSchema = new mongoose.Schema({     // añadir la abstraccion de un post en dev.to
     writerImg: {
-        type: Image,
+        type: String,
         required: true,
     },
     writer: {
