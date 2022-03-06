@@ -109,4 +109,54 @@ router.delete('/:id', async(request, response) => {
     }
 })
 
+
+
+/**
+ * 
+ */
+
+ router.post('/signup', async (request, response)=>{
+    try {
+        const writerData = request.body;
+        const writerCreated = await users.signUp(writerData);
+
+        response.json({
+            success: true,
+            message: 'Writer created successfully',
+            data: {
+                writer: writerCreated
+            }
+        });
+    }catch(error){
+        response.status(400);
+        response.json({
+            success: false,
+            message: 'Could not register',
+            error: error.message
+        })
+    }
+})
+
+router.post('/login', async(request, response)=>{
+    try{
+        const {email, password} = request.body;
+        const token = await users.login(email, password);
+        
+        response.json({
+            success: true,
+            message: 'Writer logged in :D',
+            data: {
+                token
+            }
+        })
+    }
+    catch(error){
+        response.status(400)
+        response.json({
+            success: false,
+            message: 'Could not register',
+            error: error.message
+        })
+    }
+})
 module.exports = router

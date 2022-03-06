@@ -1,5 +1,7 @@
 const Writer = require('../models/writers')
 
+const bcrypt = require('../lib/bcrypt');
+const jwt = require('../lib/jwt');
 
 function getAll() {
     return Writer.find({}) 
@@ -28,7 +30,7 @@ function getAll() {
 
     const writerFound = await Writer.findOne({email: email})
 
-    if(writerFound) throw new Error('User already exists')
+    if(writerFound) throw new Error('Writer already exists')
     
     const passwordEncrypted = await bcrypt.hash(password)
 

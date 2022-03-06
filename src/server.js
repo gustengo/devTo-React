@@ -1,11 +1,15 @@
 const express = require('express')
+const cors = require('cors')
+
 const postRouter = require('./routers/post')
 const writersRouter = require('./routers/writers')
 // const writersRouter = require('./routers/writers')
 
 const server = express()
 
-server.use(express.json())
+// middlewares
+server.use(cors());
+server.use(express.json());
 
 // server.use('/writers', writersRouter)
 
