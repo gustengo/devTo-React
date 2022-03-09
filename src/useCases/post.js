@@ -10,7 +10,7 @@ function create(dataPost) {
 }
 
 function updateData(idPost, dataToUpdate){
-    return Post.findByIdAndUpdate(idPost, dataToUpdate)
+    return Post.findByIdAndUpdate(idPost, dataToUpdate, {new: true} ) 
 }
 
 function deleteById(idPost) {

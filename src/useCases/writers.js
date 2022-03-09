@@ -13,7 +13,7 @@ function getAll() {
  }
  
  function updateData(idWriter, dataToUpdate){
-     return Writer.findByIdAndUpdate(idWriter, dataToUpdate)
+     return Writer.findByIdAndUpdate(idWriter, dataToUpdate, {new: true})
  }
  
  function deleteById(idWriter) {
