@@ -75,7 +75,7 @@ router.patch('/:id', async (request, response) => {
     try{
     const idPost = request.params.id;
     const dataToUpdate = request.body
-    const post = await useCasesPost.updateData(idPost, dataToUpdate, {new: true}) // Esto es lo que vamos a actualizar, 
+    const post = await useCasesPost.updateData(idPost, dataToUpdate, ) // Esto es lo que vamos a actualizar, 
     if (!post) throw new Error("Post not found");
     response.json({
       succes: true,

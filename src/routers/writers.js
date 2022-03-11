@@ -74,7 +74,7 @@ router.patch('/:id', async (request, response) => {
     try{
     const idWriter = request.params.id;
     const dataToUpdate = request.body
-    const writer = await useCasesWriters.updateData(idWriter, dataToUpdate, {new: true}) // Esto es lo que vamos a actualizar, 
+    const writer = await useCasesWriters.updateData(idWriter, dataToUpdate,) // Esto es lo que vamos a actualizar, 
     if (!writer) throw new Error("Writter not found");
     response.json({
       succes: true,

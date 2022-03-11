@@ -37,6 +37,10 @@ const postSchema = new mongoose.Schema({     // añadir la abstraccion de un pos
     readTime: {
         type: String,
         required: true
+    },
+    content: {
+        type: String,
+        required: true
     }
 
 })

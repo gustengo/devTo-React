@@ -5,7 +5,7 @@ function getAll() {
 }
 
 function create(dataPost) {
-    const {writerImg, writer, date, title, hashtag, reactions, comments, readTime} = dataPost
+    const {writerImg, writer, date, title, hashtag, reactions, comments, readTime, content} = dataPost
     return Post.create(dataPost)  
 }
 
