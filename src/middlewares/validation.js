@@ -1,8 +1,9 @@
 const Post = require('../models/post');
 
- async function validation(req, res, next) {
+
+ async function validation(request, response, next) {
      try {
-         const idPost = req.params.id;
+         const idPost = request.params.id;
          const post = await Post.findById(idPost)
          
          req.idAuthor = post

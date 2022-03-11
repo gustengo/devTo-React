@@ -3,6 +3,8 @@ const useCasesPost = require('../useCases/post')
 
 const auth = require('../middlewares/auth');
 
+const validation = require('../middlewares/validation');
+
 const router = express.Router()
 router.use(auth);
 
@@ -71,7 +73,7 @@ router.post('/', async (request, response) => {
     }
 })
 
-router.patch('/:id', async (request, response) => {
+router.patch('/:id', validation, async (request, response) => {
     try{
     const idPost = request.params.id;
     const dataToUpdate = request.body
@@ -92,7 +94,7 @@ router.patch('/:id', async (request, response) => {
   }
 })
 
-router.delete('/:id', async(request, response) => {
+router.delete('/:id', validation, async(request, response) => {
     try { const idPost =  request.params.id
          const deletePost = await useCasesPost.deleteById(idPost)
          response.json({
