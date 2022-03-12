@@ -49,7 +49,7 @@ router.get('/:id', async (request, response) => {
        })
    }
 })
-
+// POST
 router.post('/', async (request, response) => {
     try {
         const postToCreate = request.body
@@ -72,7 +72,7 @@ router.post('/', async (request, response) => {
         })
     }
 })
-
+//Patch
 router.patch('/:id', validation, async (request, response) => {
     try{
     const idPost = request.params.id;
@@ -93,7 +93,7 @@ router.patch('/:id', validation, async (request, response) => {
     })
   }
 })
-
+//Delete
 router.delete('/:id', validation, async(request, response) => {
     try { const idPost =  request.params.id
          const deletePost = await useCasesPost.deleteById(idPost)

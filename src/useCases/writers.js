@@ -1,5 +1,4 @@
 const Writer = require('../models/writers')
-
 const bcrypt = require('../lib/bcrypt');
 const jwt = require('../lib/jwt');
 

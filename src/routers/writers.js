@@ -2,7 +2,7 @@ const express = require('express')
 const useCasesWriters = require('../useCases/writers')
 
 const router = express.Router()
-
+//GET ALL
 router.get('/', async (request, response) => {
     try {
         const allWriters = await useCasesWriters.getAll()
@@ -24,7 +24,7 @@ router.get('/', async (request, response) => {
     }
 })
 
-// GET by ID
+// GET USER by ID
 router.get('/:id', async (request, response) => {
     try { 
         const idWriter =  request.params.id
@@ -109,16 +109,11 @@ router.delete('/:id', async(request, response) => {
     }
 })
 
-
-
-/**
- * 
- */
-
+//POST Singup
  router.post('/signup', async (request, response)=>{
     try {
         const writerData = request.body;
-        const writerCreated = await users.signUp(writerData);
+        const writerCreated = await writer.signUp(writerData);
 
         response.json({
             success: true,
@@ -136,11 +131,11 @@ router.delete('/:id', async(request, response) => {
         })
     }
 })
-
+//POST Login
 router.post('/login', async(request, response)=>{
     try{
-        const {email, password} = request.body;
-        const token = await users.login(email, password);
+        const {email, password} = request.body
+        const token = await writers.login(email, password)
         
         response.json({
             success: true,
@@ -159,4 +154,5 @@ router.post('/login', async(request, response)=>{
         })
     }
 })
+
 module.exports = router
