@@ -16,8 +16,10 @@ function Home() {
               <AsideIzquierdo />
             </Col>
             <Col xs={6}>
+              card
             </Col>
             <Col>
+            aside derecho
             </Col>
           </Row>
         </Container>

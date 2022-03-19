@@ -7,6 +7,7 @@ function buttonContent(props) {
     const { image, title } = content;
     return (
       <div id="contenido">
+        
         <Button>{title}</Button>
       </div>
     );
