@@ -1,18 +1,29 @@
 import React from "react";
-import Row from 'react-bootstrap/Row'
-import Navegador from '../components/Navbar/index'
-import AsideIzquierdo from '../components/asideIzquierdo/index'
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Navegador from "../components/Navbar/index";
+import AsideIzquierdo from "../components/asideIzquierdo/index";
 
-
-function Home(){
-    return(
-        <>
-            <Navegador/>
-            <Row>
-                <AsideIzquierdo />
-            </Row>
-        </>
-    );
+function Home() {
+  return (
+    <>
+      <Navegador />
+      <div style={{backgroundColor:'#ebebeb'}}>
+        <Container fluid="sm">
+          <Row>
+            <Col>
+              <AsideIzquierdo />
+            </Col>
+            <Col xs={6}>
+            </Col>
+            <Col>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
+  );
 }
 
 export default Home;

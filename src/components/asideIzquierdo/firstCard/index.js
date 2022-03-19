@@ -1,18 +1,23 @@
 import React from "react";
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import './card.scss'
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import "./card.scss";
 
 function cardCommunity() {
   return (
-    <Card id='community' style={{ width: "18rem" }}>
+    <Card id="community" style={{ width: "16rem" }}>
       <Card.Body>
-        <Card.Title>DEV Community is a community of 816,943 amazing developers </Card.Title>
+        <Card.Title>
+         <span>DEV Community</span> is a community of 816,943 amazing developers{" "}
+        </Card.Title>
         <Card.Text>
-          We're a place where coders share, stay up-to-date and grow their careers. 
+          We're a place where coders share, stay up-to-date and grow their
+          careers.
         </Card.Text>
-        <Button variant="outline-light">Go somewhere</Button>
-        <Button variant="outline-primary">Go somewhere</Button>
+        <div>
+          <Button variant="outline-light">Go somewhere</Button>
+          <Button variant="outline-primary">Go somewhere</Button>
+        </div>
       </Card.Body>
     </Card>
   );

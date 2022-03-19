@@ -3,7 +3,11 @@ import CardCommunity from './firstCard/index'
 
 function asideIzquierdo(){
   return(
-    <CardCommunity />
+    <>
+      <br />
+      <CardCommunity />
+    </>
+    
   );
 }
 
