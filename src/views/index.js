@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navegador from "../components/Navbar/index";
 import AsideIzquierdo from "../components/asideIzquierdo/index";
+import AsideRight from "../components/AsideRight/SecondCard/";
 
 function Home() {
   return (
@@ -19,7 +20,7 @@ function Home() {
               card
             </Col>
             <Col>
-            aside derecho
+              <AsideRight />
             </Col>
           </Row>
         </Container>
