@@ -1,0 +1,53 @@
+[
+
+    {   
+        "id":"1",
+        "content":"AlmaLinux Mailing Lists Now Available!",
+        "newbadge": "New"
+    },
+    {   
+        "id":"2",
+        "content":"How to add Vue to a Laravel app?",
+        "newbadge": "New"
+    },
+    {   
+        "id":"3",
+        "content":"What is your best skill as a developer?",
+        "comments": 49
+    },
+    {   
+        "id":"4",
+        "image":"videos.png",
+        "title":"Videos"
+    },
+    {   
+        "id":"5",
+        "image":"tags.png",
+        "title":"Tags"
+    },
+    {   
+        "id":"6",
+        "image":"FAQ.png",
+        "title":"FAQ"
+    },
+    {   
+        "id":"7",
+        "image":"DEVshop.png",
+        "title":"Forem Shop"
+    },
+    {   
+        "id":"8",
+        "image":"sponsors.png",
+        "title":"Sponsors"
+    },
+    {   
+        "id":"9",
+        "image":"about.png",
+        "title":"About"
+    },
+    {   
+        "id":"10",
+        "image":"Contact.png",
+        "title":"Contact"
+    }
+]

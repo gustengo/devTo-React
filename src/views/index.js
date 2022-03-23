@@ -4,7 +4,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navegador from "../components/Navbar/index";
 import AsideIzquierdo from "../components/asideIzquierdo/index";
-import AsideRight from "../components/AsideRight/SecondCard/";
+import ContentRightAside from "../components/AsideRight/ContentRightAside";
+import ContentListings from "../components/AsideRight/ContentListings";
+import HastagCard from "../components/AsideRight/HastagCard1";
+import HastagCard2 from "../components/AsideRight/HastagCard2";
 
 function Home() {
   return (
@@ -20,7 +23,10 @@ function Home() {
               card
             </Col>
             <Col>
-              <AsideRight />
+              <ContentRightAside />
+              <ContentListings />
+              <HastagCard />
+              <HastagCard2 />
             </Col>
           </Row>
         </Container>
