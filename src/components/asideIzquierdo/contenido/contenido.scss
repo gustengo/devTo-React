@@ -1,5 +1,28 @@
 #btn{
     width: 98%;
-    text-align: initial;
+    text-align: start;
     margin-bottom: 0.2rem;
+    background:none;
+    border-style: none;
+    display: flex;
+}
+#btn:hover{
+    background: #0a84ff6c;
+    text-decoration: underline #0a64ff;
+    color: #0a64ff;
+}
+img{
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+span{
+    color: black;
+}
+span:hover{
+    color: #0a64ff;
+}
+#botones{
+    display: flex;
+    flex-direction: column;
 }

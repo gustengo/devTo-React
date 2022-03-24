@@ -1,6 +1,12 @@
 #comunnity{
     justify-content: first baseline;
 }
-span{
-    color: #9400ff;
+#dev{
+    color: #0a64ff;
+}
+#content, #dev{
+    font-weight: 700;
+}
+#content:hover{
+    color: black
 }
