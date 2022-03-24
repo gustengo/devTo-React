@@ -8,7 +8,7 @@ import ContentRightAside from "../components/AsideRight/ContentRightAside";
 import ContentListings from "../components/AsideRight/ContentListings";
 import HastagCard from "../components/AsideRight/HastagCard1";
 import HastagCard2 from "../components/AsideRight/HastagCard2";
-
+import Content from "../components/Cards/Content";
 function Home() {
   return (
     <>
@@ -20,7 +20,7 @@ function Home() {
               <AsideIzquierdo />
             </Col>
             <Col xs={6}>
-              card
+              <Content />
             </Col>
             <Col>
               <ContentRightAside />
