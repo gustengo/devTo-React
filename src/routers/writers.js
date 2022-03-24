@@ -1,9 +1,9 @@
 const express = require('express')
 const useCasesWriters = require('../useCases/writers')
-
+const auth = require('../middlewares/auth')
 const router = express.Router()
 //GET ALL
-router.get('/', async (request, response) => {
+router.get('/',auth, async (request, response) => {
     try {
         const allWriters = await useCasesWriters.getAll()
 
@@ -25,7 +25,7 @@ router.get('/', async (request, response) => {
 })
 
 // GET USER by ID
-router.get('/:id', async (request, response) => {
+router.get('/:id',auth, async (request, response) => {
     try { 
         const idWriter =  request.params.id
         const getWriter = await useCasesWriters.getById(idWriter)
@@ -70,7 +70,7 @@ router.post('/', async (request, response) => {
     }
 })
 
-router.patch('/:id', async (request, response) => {
+router.patch('/:id',auth, async (request, response) => {
     try{
     const idWriter = request.params.id;
     const dataToUpdate = request.body
@@ -91,7 +91,7 @@ router.patch('/:id', async (request, response) => {
   }
 })
 
-router.delete('/:id', async(request, response) => {
+router.delete('/:id',auth, async(request, response) => {
     try { const idWriter =  request.params.id
          const deleteWriter = await useCasesWriters.deleteById(idWriter)
          response.json({
@@ -135,7 +135,7 @@ router.delete('/:id', async(request, response) => {
 router.post('/login', async(request, response)=>{
     try{
         const {email, password} = request.body
-        const token = await writers.login(email, password)
+        const token = await useCasesWriters.login(email, password)
         
         response.json({
             success: true,

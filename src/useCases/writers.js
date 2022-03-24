@@ -6,9 +6,12 @@ function getAll() {
     return Writer.find({}) 
  }
  
- function create(dataWriter) {
+ async function create(dataWriter) {
      const {name, joinDate, biography, nationality, email, password} = dataWriter
-     return Writer.create(dataWriter)  
+     const userFound = await Writer.findOne({email})
+     if (userFound) throw new Error ("Ya existe un usuario con este correo")
+     const passwordEncrypted = await bcrypt.hash(password)
+     return Writer.create({...dataWriter, password:passwordEncrypted})  
  }
  
  function updateData(idWriter, dataToUpdate){

@@ -6,7 +6,7 @@ const auth = require('../middlewares/auth');
 const validation = require('../middlewares/validation');
 
 const router = express.Router()
-router.use(auth);
+
 
 router.get('/', async (request, response) => {
     try {
@@ -50,7 +50,7 @@ router.get('/:id', async (request, response) => {
    }
 })
 // POST
-router.post('/', async (request, response) => {
+router.post('/', auth, async (request, response) => {
     try {
         const postToCreate = request.body
 
@@ -73,7 +73,7 @@ router.post('/', async (request, response) => {
     }
 })
 //Patch
-router.patch('/:id', validation, async (request, response) => {
+router.patch('/:id',auth, async (request, response) => {
     try{
     const idPost = request.params.id;
     const dataToUpdate = request.body
@@ -94,7 +94,7 @@ router.patch('/:id', validation, async (request, response) => {
   }
 })
 //Delete
-router.delete('/:id', validation, async(request, response) => {
+router.delete('/:id',auth, async(request, response) => {
     try { const idPost =  request.params.id
          const deletePost = await useCasesPost.deleteById(idPost)
          response.json({

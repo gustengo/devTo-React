@@ -34,8 +34,6 @@ const writerSchema = new mongoose.Schema({ //Agregar campos de writers
     password: {
         type: String,
         required: true,
-        minLength: 3,
-        maxLength: 20,
         trim: true
     }
 
