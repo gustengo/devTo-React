@@ -1,52 +1,52 @@
 [
     {   
         "id":"1",
-        "image":"home.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/home.png",
         "title":"Home"
     },
     {   
         "id":"2",
-        "image":"listings.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/listings.png",
         "title":"Listings"
     },
     {   
         "id":"3",
-        "image":"Podcasts.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/Podcasts.png",
         "title":"Podcasts"
     },
     {   
         "id":"4",
-        "image":"videos.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/videos.png",
         "title":"Videos"
     },
     {   
         "id":"5",
-        "image":"tags.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/tags.png",
         "title":"Tags"
     },
     {   
         "id":"6",
-        "image":"FAQ.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/FAQ.png",
         "title":"FAQ"
     },
     {   
         "id":"7",
-        "image":"DEVshop.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/DEVshop.png",
         "title":"Forem Shop"
     },
     {   
         "id":"8",
-        "image":"sponsors.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/sponsors.png",
         "title":"Sponsors"
     },
     {   
         "id":"9",
-        "image":"about.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/about.png",
         "title":"About"
     },
     {   
         "id":"10",
-        "image":"Contact.png",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/contact.png",
         "title":"Contact"
     }
 ]
