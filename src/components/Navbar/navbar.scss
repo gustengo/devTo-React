@@ -1,0 +1,13 @@
+#izq{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+}
+
+#der{
+    width:20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
