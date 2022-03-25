@@ -1,0 +1,27 @@
+[
+    {
+       "id":1,
+       "title":"twitter",
+       "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/twitter.png"
+    },
+    {
+        "id":2,
+        "title":"facebook",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/fb.png"
+     },
+     {
+        "id":3,
+        "title":"gitHub",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/git.png"
+     },
+     {
+        "id":4,
+        "title":"instagram",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/image.png"
+     },
+     {
+        "id":5,
+        "title":"twitch",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/twitch.png"
+     }
+]

@@ -6,7 +6,7 @@ import "./card.scss";
 function cardCommunity() {
   return (
     <>
-      <Card id="community" style={{ width: "98%" }}>
+      <Card id="community" style={{ width: "78%" }}>
         <Card.Body>
           <Card.Title >
               <span id="dev">DEV Community</span> <span id="content">is a community of <br />816,943
@@ -17,8 +17,8 @@ function cardCommunity() {
             careers.
           </Card.Text>
           <div id="botones">
-            <Button variant="outline-light">Go somewhere</Button>
-            <Button variant="outline-primary">Go somewhere</Button>
+            <Button class="botons" variant="outline-light">Go somewhere</Button>
+            <Button class="botons" variant="outline-primary">Go somewhere</Button>
           </div>
         </Card.Body>
       </Card>

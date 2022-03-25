@@ -11,15 +11,14 @@ function Navegador() {
   return (
     <>
       <Navbar bg="white" variant="dark">
-        <Container fluid='sm'>
+        <Container fluid='sm' id="nav">
           <div id="izq">
             <Navbar.Brand href="#home">
               <img
                 alt="Logo-Dev"
                 src={Logo}
-                width="40"
-                height="33"
                 className="d-inline-block align-top"
+                id ="logo"
               />
             </Navbar.Brand>
             <InputGroup className="mb-1">

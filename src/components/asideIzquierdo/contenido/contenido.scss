@@ -1,5 +1,5 @@
 #btn{
-    width: 98%;
+    width: 78%;
     text-align: start;
     margin-bottom: 0.2rem;
     background:none;
@@ -11,10 +11,10 @@
     text-decoration: underline #0a64ff;
     color: #0a64ff;
 }
-img{
+.logos{
     width: 24px;
     height: 24px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 span{
     color: black;
@@ -25,4 +25,15 @@ span:hover{
 #botones{
     display: flex;
     flex-direction: column;
+}
+#btn-redes{
+    width: 48px;
+    height: 40px;
+    color: none;
+}
+
+#contenido-redes{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
 }

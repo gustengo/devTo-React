@@ -1,0 +1,17 @@
+[
+    {   
+        "id":"1",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/codeofconduct.png",
+        "title":"Code of Conduct"
+    },
+    {   
+        "id":"2",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/privacy.png",
+        "title":"Privacy Policy"
+    },
+    {   
+        "id":"3",
+        "image":"https://raw.githubusercontent.com/rgarza237/ProyectoMaquetado/main/imagenes/terms%20of%20use.png",
+        "title":"Terms of Use"
+    }
+]

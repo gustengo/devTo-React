@@ -19,7 +19,7 @@ function buttonContent(props) {
     return (
       <div id="contenido">
         <Button id="btn">
-          <img src={/*icon*/image} />
+          <img  class = "logos"src={/*icon*/image} />
           <span>{title}</span>
         </Button>
       </div>

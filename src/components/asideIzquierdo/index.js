@@ -1,15 +1,18 @@
 import React from "react";
-import CardCommunity from './firstCard/index'
-import Contenido from './contenido/index'
+import CardCommunity from "./firstCard/index";
+import Contenido from "./contenido/index";
+import OtherCard from "./otherCard/index";
+import Red from "./redes/index"
 
-function asideIzquierdo(){
-  return(
+function asideIzquierdo() {
+  return (
     <>
       <br />
       <CardCommunity />
       <Contenido />
+      <OtherCard />
+      <Red />
     </>
-    
   );
 }
 
