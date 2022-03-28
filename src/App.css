@@ -35,3 +35,10 @@
     transform: rotate(360deg);
   }
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+@import "./scss/default.scss";
+@import "./scss/variables.scss";
+

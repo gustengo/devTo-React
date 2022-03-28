@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+#Reto Módulo Backend
+
+- Equipo:
+Paco
+Vryahn
+Erick
+Gustavo
+Aldahir
+
+=======
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +79,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+>>>>>>> fb9c8f3e74e5032ce513a11923a01a92a860888a

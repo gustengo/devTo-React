@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import ArticleComponent from './ArticuleComponent';
-import './content.css';
+import EstructureCard from './EstructureCard';
+import './content.scss';
 
 const Content = () => {
     const [articles, setArticles] = useState(null);
@@ -27,12 +28,13 @@ const Content = () => {
           <a href="/#">Latest</a>
         </nav>
       </header>
-      <div className ="articles">
-          {articles && articles.map((article, id)=>{
-              return <ArticleComponent key={id} data={article} />;
-            }
-          )
-        }
+      <div className="articles">
+        {articles &&
+          articles.map((article, id) => {
+            return <ArticleComponent key={id} data={article} />;
+          })}
+
+        {!articles && [1, 2, 3, 4, 5].map((a) => <EstructureCard key={a} />)}
       </div>
     </main>
   );

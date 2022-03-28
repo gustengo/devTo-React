@@ -1,8 +1,8 @@
 import React from "react";
  import { BiHeart } from "react-icons/bi";
  import { FaRegComment } from "react-icons/fa";
- import "./articuleComponent.css";
 
+import './articuleComponent.scss'
 
 function ArticleComponent (props){  
 
