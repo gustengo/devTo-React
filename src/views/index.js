@@ -8,7 +8,7 @@ import ContentRightAside from "../components/AsideRight/ContentRightAside";
 import ContentListings from "../components/AsideRight/ContentListings";
 import HastagCard from "../components/AsideRight/HastagCard1";
 import HastagCard2 from "../components/AsideRight/HastagCard2";
-
+import Content from "../components/Cards/Content";
 function Home() {
   //USE STATES
   const [writers, setWriters] = React.useState([])
@@ -32,12 +32,15 @@ function Home() {
             <Col>
               <AsideIzquierdo />
             </Col>
-            <Col xs={6}> {writers.map((writer) => { //se accede a cada writer a traves de mapear el array.
+            <Col xs={6}>
+              <Content />
+            </Col>
+           {/*  <Col xs={6}> {writers.map((writer) => { //se accede a cada writer a traves de mapear el array.
 
               return (
                 <h1> {writer.title} </h1>
               )
-            })} </Col>
+            })} </Col> */}
             <Col>
               <ContentRightAside />
               <ContentListings />
